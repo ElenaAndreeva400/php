@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Logistics services</title>
+</head>
+<body>
+
+
+<form action="#" method="post"
+    enctype="multipart/form-data"> <!--для отправки файлов на сервер-->
+    <!--action - обработчик данных формы-->
+    <!--method - метод передачи данных формы-->
+    <fieldset> <!-- группировка полей формы информации о заказчике -->
+        <legend>Информация об организации-заказчике</legend>
+        <label for="text">Наименование организации</label>
+        <input id="text" type="text" placeholder="ООО" maxlength=10>
+        <input required type="text" placeholder="Оборудование">
+        <br>
+        <br>
+        <label for="text">ФИО ответственного лица</label>
+        <input required type="text" placeholder="Иван Иванович Иванов">
+        <br>
+        <br>
+        <label>Введите e-mail</label>
+        <input required autofocus type="email" placeholder="oborudovanie@yandex.ru">
+        <br>
+        <br>
+        <label for="pwd">Введите пароль</label>
+        <input minlength="3" maxlength="9" id="pwd" type="password">
+      </fieldset>
+
+      <fieldset> <!--Информация о грузе -->
+        <legend>Информация о товаре</legend>
+        <label for="text">Наименование товара</label>
+        <input required id="text" type="text" placeholder="подшипники">
+        <br>
+        <label for="pwd">Ссылка на описание ввозимого товара</label>
+        <input type="url" placeholder="https://oborudovanie.ru//about" minlength="20">
+        <br>
+        <label>Загрузка файлов: спецификаций, чертежей, описаний товара</label>
+        <input type="file" multiple accept="image/*">
+      </fieldset>
+      <fieldset>
+        <legend>Вес партии</legend>
+        <label><input name="answer1" type="radio">до 5 кг</label>
+        <label><input name="answer2" type="radio">до 20 кг</label>
+        <label><input name="answer3" type="radio">до 100 кг</label>
+        <label><input name="answer4" type="radio">до 250 кг</label>
+        <label><input name="answer5" type="radio">до 400 кг</label>
+        <label><input name="answer6" type="radio">более 400 кг</label>
+      </fieldset>
+      <fieldset>
+        <legend>Тип груза</legend>
+        <label><input name="answer1[]" type="checkbox">Мелкогабаритный</label>
+        <label><input name="answer2[]" type="checkbox">Навалочный</label>
+        <label><input name="answer3[]" type="checkbox">Негабаритный</label>
+        <label><input name="answer4[]" type="checkbox">Скоропортящийся</label>
+        <label><input name="answer5[]" type="checkbox">Хрупкий</label>
+        <label><input name="answer6[]" type="checkbox">Опасный</label>
+        <label><input name="answer7[]" type="checkbox">Штучный (генеральный)</label>
+        <label><input name="answer8[]" type="checkbox">Газообразный</label>
+        <label><input name="answer9[]" type="checkbox">Жидкости</label>
+      </fieldset>
+      <fieldset>
+        <legend>Склад отправления в:</legend>
+        <label><input name="answer7" type="radio">Китае</label>
+        <label><input name="answer8" type="radio">Европе</label>
+        <label><input name="answer9" type="radio">Северная Америке</label>
+        <label><input name="answer10" type="radio">Южная Америке</label>
+        <label><input name="answer11" type="radio">иные страны и континенты</label>
+      </fieldset>
+      <fieldset>
+        <legend>Предпочтительный способ доставки</legend>
+        <label><input name="answer10[]" type="checkbox">авиа</label>
+        <label><input name="answer11[]" type="checkbox">морем</label>
+        <label><input name="answer12[]" type="checkbox">жд</label>
+        <label><input name="answer13[]" type="checkbox">автотранспорт</label>
+        <label><input name="answer13[]" type="checkbox">сборный</label>
+      </fieldset>
+      <fieldset>
+        <legend>Регулярность поставок</legend>
+        <label><input name="answer12" type="radio">разово</label>
+        <label><input name="answer13" type="radio">1 раз в месяц</label>
+        <label><input name="answer14" type="radio">несколько раз в месяц</label>
+        <label><input name="answer15" type="radio">раз в полгода</label>
+      </fieldset>
+      <fieldset>
+        <legend>Упаковочные места</legend>
+        <label>Общее количество упаковочных мест</label>
+        <input type="number" min="2" max="12" step="2">
+        <br>
+        <label>Средние размеры стандартного упаковочного места:</label>
+        <label>Длина в см</label>
+        <input type="number" min="1" max="400" step="2">
+        <label>Ширина в см</label>
+        <input type="number" min="1" max="400" step="2">
+        <label>Высота в см</label>
+        <input type="number" min="1" max="400" step="2">
+      </fieldset>
+      <!-- следующее поле формы скрытое  -->
+      <fieldset>
+        <legend></legend>
+        <input type="hidden" value="info">
+      </fieldset>
+
+      <fieldset>
+        <legend>Дата и время готовности груза к забору</legend>
+        <label for="datetime">Выбор даты и времени</label>
+        <input id="datetime" type="datetime-local">
+      </fieldset>
+
+      <fieldset>
+        <legend>Срочность доставки груза</legend>
+        <select name="select" size="5" required>
+            <option value="1">1 неделя</option>
+            <option value="2">2 недели</option>
+            <option value="3">3 недели</option>
+            <option value="4" selected>4 недели</option>
+            <option value="5">5 недель и более</option>
+        </select>
+      </fieldset>
+
+        <fieldset>
+          <legend>Запрашиваемые услуги</legend>
+           <select name="select2" multiple>
+            <optgroup label="Услуги по закупке">
+                <option value="1">Поиск поставщика</option>
+                <option value="2">Заключения контракта с поставщиком</option>
+                <option value="3">Оплата поставщику</option>
+            </optgroup>
+            <optgroup label="Услуги по доставке">
+                <option value="4">Консолидация сборного груза</option>
+                <option value="5">Упаковка груза</option>
+                <option value="6">Подготовка отгрузочных документов</option>
+            </optgroup>
+            <optgroup label="Услуги по растамаживанию">
+                <option value="4">Проверка правильности оформления пакета отгрузочных документов</option>
+                <option value="5">Присвоение кодов ТН ВЭД</option>
+                <option value="6">Оказание брокерских услуг и таможенное оформление</option>
+            </optgroup>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Дополнительная информация</legend>
+        <textarea cols="40" rows="10" autofocus required placeholder="Требуется страхование груза."></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend></legend>
+        <button type="submit"><img src="logistica.jpg" alt="Разместить заказ" width=200 length=500><br>Разместить заказ</button>
+    </fieldset>
+
+</form>
+
+</body>
+</html>
