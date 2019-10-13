@@ -23,8 +23,8 @@ nav ul {
       font-size: 200%; /* если вместо следующего span использовать
   } */
 
-.span {
-  background: #fc0;
+span {
+  background: #ffffff;
 }
 
 .first {
