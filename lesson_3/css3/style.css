@@ -1,0 +1,58 @@
+body {
+    background-repeat: no-repeat; /* повторяемость изображения по оси х и по оси у*/
+    background-position: center;
+    background-attachment: fixed; /* изображение может быть зафиксировано = при прокрутке страницы изображение остается на месте */
+    background-size: cover;
+  }
+
+nav ul {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    list-style-type: none; /*убрала маркеры списка*/
+    text-decoration: none; /*убрала подчеркивание элементов списка-ссылки*/
+    }
+
+  nav li {
+     padding: 30px;
+     background: #002137;
+     display: inline-block;
+  }
+
+/*  strong {
+      font-size: 200%; /* если вместо следующего span использовать
+  } */
+
+.span {
+  background: #fc0;
+}
+
+.first {
+  display:inline-block;
+  position:absolute;
+  top:230px;
+  left:30px;
+  color: #ffffff;
+}
+.second {
+  display:inline-block;
+  position:absolute;
+  top:690px;
+  left:30px;
+  color: #ffffff;
+}
+.third {
+  display:inline-block;
+  position:absolute;
+  top:1120px;
+  left:30px;
+  color: #ffffff;
+}
+p.clip {
+    margin: 15px auto;
+    padding: 10px;
+    width: 360px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
