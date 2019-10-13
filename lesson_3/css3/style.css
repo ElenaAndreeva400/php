@@ -10,13 +10,18 @@ nav ul {
     top: 50px;
     left: 30px;
     list-style-type: none; /*убрала маркеры списка*/
-    text-decoration: none; /*убрала подчеркивание элементов списка-ссылки*/
     }
 
   nav li {
      padding: 30px;
      background: #002137;
      display: inline-block;
+   }
+
+  nav a {
+    font: 200% serif;
+    color: #ffffff;
+    text-decoration: none; /*убрала подчеркивание элементов списка-ссылки*/
   }
 
 /*  strong {
