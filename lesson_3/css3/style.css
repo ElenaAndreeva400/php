@@ -19,8 +19,8 @@ nav ul {
    }
 
   nav a {
-    font: 200% serif;
-    color: #ffffff;
+    font: 150% serif;
+    color: #a8d8ff;
     text-decoration: none; /*убрала подчеркивание элементов списка-ссылки*/
   }
 
@@ -32,6 +32,14 @@ span {
   background: #ffffff;
 }
 
+h1,
+h2 {
+  color: #a8d8ff;
+}
+
+h1{
+    font: 250% serif;
+  }
 .first {
   display:inline-block;
   position:absolute;
@@ -42,21 +50,21 @@ span {
 .second {
   display:inline-block;
   position:absolute;
-  top:690px;
+  top:730px;
   left:30px;
   color: #ffffff;
 }
 .third {
   display:inline-block;
   position:absolute;
-  top:1120px;
+  top:1230px;
   left:30px;
   color: #ffffff;
 }
 p.clip {
     margin: 15px auto;
     padding: 10px;
-    width: 360px;
+    width: 660px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
