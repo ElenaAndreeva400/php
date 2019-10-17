@@ -1,0 +1,65 @@
+.flex-row,
+.flex-2-2,
+.flex-1,
+.flex-3,
+.flex-4,
+.flex-2-1 {
+    display: flex;
+    }
+
+.flex-2-1,
+.flex-2-2 {
+flex-direction: row;
+}
+
+.flex-2-1 {
+  height: 100px;
+  background: #4fa1b0;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-1 {
+    flex: 0.5;
+    flex-direction: column;
+}
+
+.flex-2 {
+    flex: 2.5;
+    flex-direction: column;
+}
+
+.border {
+    border: none;
+}
+
+.flex-2-2 {
+  background: #4fa1b0;
+  flex-direction: row;
+  height: auto;
+  }
+
+.flex-3,
+.flex-4 {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+    }
+
+.pic1 img,
+.pic2 img {
+  box-shadow: 0 0 10px 2px #6173b0;
+}
+
+p {
+ margin-left: 20px;
+}
+
+.flex-1 {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-1 a {
+  text-decoration: none;
+}
