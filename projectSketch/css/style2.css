@@ -1,0 +1,19 @@
+.flex {
+  display: flex;
+}
+
+.flex1 {
+  flex-direction: column;
+}
+
+.column1 {
+  flex: 5;
+}
+
+.column2 {
+  flex: 7;
+}
+
+.flex1 a {
+  text-decoration: none;
+}
