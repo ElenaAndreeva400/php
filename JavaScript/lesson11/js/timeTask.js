@@ -1,7 +1,7 @@
 
-let dateFromMoscow = moment('2019-11-17 17:30')// дата вылета
+let dateFromMoscow = moment('2019-12-28 22:15')// дата вылета
 console.log(dateFromMoscow.format("LLL"));
-dateFromMoscow.add(20, 'hours'); // время в полете Мск-Сидней 20 часов
+dateFromMoscow.add(10, 'hours'); // время в полете Мск-Нью-Йорк 10 часов
 console.log(dateFromMoscow.format("LLL"));
-let arrivalTimeToSydney = dateFromMoscow.clone().tz('Australia/Sydney');
-console.log(arrivalTimeToSydney.format("LLL")); // разница +8 часов
+let arrivalTimeToNY = dateFromMoscow.clone().tz('America/New_York');
+console.log(arrivalTimeToNY.format("LLL")); // разница -8 часов
