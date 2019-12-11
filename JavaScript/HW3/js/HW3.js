@@ -31,7 +31,7 @@ function days(num) {
 }
 days(448);
 
-// четвертая задача - доделаю на днях
+// четвертая задача
 let arr4 = [];
 let sum1 = 0;
 for (let j=0; j<9; j++) {
@@ -82,8 +82,23 @@ for (let j=0; j<9; j++) {
 console.log(arr45);
 console.log(sum5);
 
-// let arraySum = [];
-// for (i=0; i<5; i++) {
-//   arraySum.push(sum1, sum22, sum33, sum4, sum5);
-// }
-// console.log(arraySum);
+function sumAllArray(array) {
+  let sum = 0;
+  for (let arr = 0; arr < array.length; arr++) {
+    sum += array[arr];
+  }
+  return sum;
+}
+
+function resMaxSum(...arr) {
+  let max = 0;
+  let array;
+  for (let i = 0; i < arr.length; i++) {
+    if (max < sumAllArray(arr[i])) {
+      max = sumAllArray(arr[i]);
+      array = i + 1;
+    }
+  }
+  return `Массив: ${array}  с самой большой суммой чисел:  ${max}`;
+}
+console.log(resMaxSum(arr4, arr42, arr43, arr44, arr45));
