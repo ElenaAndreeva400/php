@@ -27,23 +27,26 @@ let goods = [
 ];
 // Первая задача
 function generateTable(obj, from, to) {
-  // let resGoods = [];
+   let resGoods = [];
    for (let i in obj) {
      if (obj[i].price >= from && obj[i].price <= to) {
-       console.log(obj[i].title + " цена " + obj[i].price);
+       resGoods.push(obj[i].title);
      }
    }
+   return resGoods;
 }
-generateTable(goods, 2000, 3000);
+console.log(generateTable(goods, 2000, 3000));
 
 // Вторая задача
 function addToCart(obj, titleToCart, countToCart) {
  for (let i in obj) {
-   if (obj[i].count > countToCart){
-     console.log("Заказ оформлен " + titleToCart);
-       obj[i].count -= countToCart;
+  if (obj[i].title == titleToCart) {
+   if (obj[i].count >= countToCart){
+     obj[i].count -= countToCart;
+     console.log(`Заказ оформлен на ${titleToCart} оформлен`);
    } else {
-      console.log(titleToCart + " недостаточно");
+      console.log("Недостаточное количество");
+    }
    }
  }
 }
