@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HW7</title>
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+
+  <body>
+
+    <section class="some_array_of_objects"><h3>Задание номер 3 к уроку 7</h3></section>
+
+    <form action='#' method="post" name="task">
+      <fieldset>
+         <legend>Задание номер 3 к уроку 7</legend>
+         <div>
+
+         <p><input type="checkbox" name="agree" onclick="agreeForm(this.form)">
+         Я согласен со всеми условиями</p>
+         <p><textarea name="textarea" cols="30" rows="4" disabled>
+         Шаблон договора
+         Отдаю свою время, а взамен получаю знания.
+        </textarea></p>
+        </div>
+        </fieldset>
+
+
+
+    <fieldset name="fieldset">
+      <legend>Задание номер 4 к уроку 7</legend>
+      <div>
+      <label for="login"><strong>Логин:</strong>
+      <input name="login" id="login" minlength="4" maxlength="10" size="40" type="text"></label>
+      <span name="colour" class="info-block" value="red">
+          Логин должен содержать от 4-х до 10-ти символов
+      </span>
+      </div>
+      <div>
+      <label for="password"><strong>Пароль:</strong>
+      <input name="password" id="password" minlength="6" size="40" type="password"></label>
+      <span name="colour" class="info-block" value="red">
+          Пароль должен содержать минимум 6 символов
+      </span>
+      </div>
+      <button type="submit" id="get">Отправить</button>
+    <fieldset>
+
+
+    </form>
+    <div id="paste"></div>
+
+
+
+    <script src="js/index.js">
+
+    </script>
+  </body>
+</html>
