@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <form name="validate">
+      <input data-validate="login" type="text" id="parent"> <!--required, для чисел min max,
+         для строк minlength, maxlength валидация формы на уровне html-->
+    <!--     <span>Минимальная длина 4 символа</span> -->
+      <input data-validate = "password" type="password" id="parent">
+      <input data-validae = "name" type="text" id="parent">
+      <input data-validate = "comment" type="text" id="parent">
+
+
+      <input type="submit" value="Отправить">
+
+    </form>
+    <script src="js/form.js">
+
+    </script>
+  </body>
+</html>
