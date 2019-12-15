@@ -45,8 +45,8 @@ constructor(form){
   get errorCounter() {
     return this._errorCounter;
   }
-  set errorCounter(arr){
-    this._errorCounter = arr;
+  set errorCounter(value){
+    this._errorCounter = value;
   }
 
   init(settings){
@@ -54,6 +54,7 @@ constructor(form){
     messages = settings.messages;
     successHandler = settings.successHandler;
     errorHandler = settings.errorHandler;
+    errorCounter = settings.errorCounter;
   }
 
  // название методов полностью соответствует названию ключей в let rules
@@ -157,5 +158,6 @@ validator.init({ // settings из init строка 49
   rules: rules,// по ключу rules будут лежать все правила rules
   messages: messages,
   successHandler: successHandler,
-  errorHandler: errorHandler
+  errorHandler: errorHandler,
+  errorCounter: errorCounter
 });
