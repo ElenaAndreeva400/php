@@ -1,6 +1,5 @@
 <?php
-echo "Задание №1";
-echo "<br>";
+echo "Задание №1<br><br>";
 function convertToCamelCase ($some_string) {
   $some_string = str_replace("_", " ", $some_string); 
   echo $some_string;
@@ -19,9 +18,7 @@ function convertToCamelCase ($some_string) {
 $our_string = 'this_is_string';
 convertToCamelCase($our_string);
 
-echo "<br>";
-echo "Задание №2";
-echo "<br>";
+echo "<br>Задание №2<br><br>";
 // Дана строка, содержащая полное имя файла
 //  (например, 'C:\OpenServer\testsite\www\someFile.txt').
 //   Написать функцию, которая сможет выделить из подобной
@@ -36,9 +33,7 @@ function extract_file_name ($any_string) {
 }
 extract_file_name($my_str);
 
-echo "<br>";
-echo "Задание №3";
-echo "<br>";
+echo "<br><br>Задание №3<br><br>";
 // Дано два текста. Определите степень совпадения текстов
 //  (придумать алгоритм определения соответствия, использовать 5 балльную шкалу).
 $text1 = "Это текст для тестирования нашей функции";
@@ -73,5 +68,50 @@ function comparisonDegree ($one_text, $another_text) {
     
 }
 comparisonDegree($text1, $text2);
-echo "<br>";
 
+echo "<br><br>Задание №4<br><br>";
+$arr1 = [13, 55, 100, 99];
+foreach ($arr1 as $key => $value) {
+  echo "$value\n";
+}
+
+foreach ($arr1 as $elem1) {
+    $sum = 0;
+    $someElem = $elem1;
+    do {
+        $sum += $someElem%10;
+    } while ($someElem = (int)($someElem/10));
+    $arr2[$i] = $sum;
+    $i++;
+    echo "<br>Сумма чисел $elem1 равна $sum";
+}
+echo "<br>";
+asort($arr2);
+foreach ($arr2 as $key => $value) {
+  echo "$value\n";
+}
+
+echo "<br><br>Задание №5<br>";
+
+$my_string = "tHiS iS A sTriNg tO tesT";
+
+function convert_str($str, $func) {
+  echo "<br>" . $func($str);
+}
+
+$char_up = function($str) {
+  return strtoupper($str);
+};
+
+$char_low = function($str) {
+  return strtolower($str);
+};
+
+$first_char_up = function($str) {
+  $all_low = strtolower($str);
+  return  mb_convert_case($all_low, MB_CASE_TITLE, "UTF-8");// или ucwords()
+};
+
+convert_str($my_string, $char_up);
+convert_str($my_string, $char_low);
+convert_str($my_string, $first_char_up);
