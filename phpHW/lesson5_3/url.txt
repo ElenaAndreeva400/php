@@ -1,0 +1,2 @@
+https://www.php.net/manual/ru/function.file.php : 797a83a
+https://www.php.net/manual/ru/function.fwrite.php : c8a4651
