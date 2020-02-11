@@ -1,39 +1,36 @@
-body {
-    margin: 0;
-}
-
-#present_container {
-    max-width: 700px;
+* {
+    box-sizing: border-box;
     margin: 0 auto;
 }
+.container {
+  width: 650px;
+  height: 650px;
+}
 
-#containerBox {
-    background: red;
+.messageContainer {
+  padding: 40px 20px;
+  text-align: center;
+  border: red 3px solid;
+  padding: 20px;
+  font-weight: bold;
+  color: red; 
+}
+
+p {
     display: inline-block;
-    margin: 10px;
-    padding: 30px 5px;
-    text-align: center;
-    width: 150px;
-    height: 150px;
-    color: white;
-    position: relative;
+    width: 120px;
+    height: 120px;
+    border: yellow 3px solid;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;    
 }
 
-#containerBox .present {
-    max: 100%;
-    height: 100%;
-    background-color: green;
-    color: #333;
-    transition-property: background-color;
-    transition-duration: 1s;
-    position: absolute;
+.prize {
+  background: red;
+  color: yellow;
 }
-#containerBox .noPresent {
-    max: 100%;
-    height: 100%;
-    background-color: yellow;
-    color: #333;
-    transition-property: background-color;
-    transition-duration: 1s;
-    position: absolute;
+.noPrize {
+  background: green;
+  color: yellow;
 }

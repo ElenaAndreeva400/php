@@ -1,38 +1,51 @@
-function showResults(event) {
-  let possibilities = [present, noPresent];
-  present.innerText = "Вы выиграли";
-  noPresent.innerText = "Не в этот раз";
-  if (event.target.classList.contains("containerBox")) {
-    event.target.innerText = possibilities[Math.floor(Math.random() * possibilities.length)];
-      if (present) {
-        event.target.classList.add('present');
-        this.removeEventListener("click", showResults);
-      } else if (noPresent) {
-       event.target.classList.add('noPresent');
-        this.removeEventListener("click", showResults);
+function guessYourPrize(n) {
+
+  let attempts = 3;
+
+  let divContainer = document.createElement('div');
+  divContainer.classList = 'container';
+
+  let messageContainer = document.createElement('div');
+  divContainer.append(messageContainer);
+  messageContainer.innerText = `Всего попыток: ${attempts}`;
+  messageContainer.classList = 'messageContainer';
+
+  let table = document.createElement('div');
+  divContainer.append(table);
+
+  let arr = [];
+  for (let i = 0; i < 3; i++) {
+      arr[i] = Math.floor(Math.random()*(n*n));
+  }
+
+  for (let i = 0; i < n*n; i++) {
+      let mes = document.createElement('p');
+      mes.innerText = `Узнай что внутри`;
+      table.append(mes);
+      mes.addEventListener('click', insideBox);
+
+
+      function insideBox() {
+          if (attempts > 0) {
+              if (arr.includes(i)) {
+                  mes.classList = 'prize';
+                  mes.innerText = 'Здесь лежит приз';
+             
+              } else {
+                  mes.classList = 'noPrize';
+                  mes.innerText = 'Тут пусто';
+             
+              }
+              messageContainer.innerText = `Осталось попыток: ${--attempts}`;
+          } else {
+            messageContainer.innerText = 'Попытки исчерпаны. Игра закончена.';
+            return;
+          }
+
       }
-   }
+  }
+
+  document.body.append(divContainer);
+
 }
-let presentsContainer = document.getElementById("present_container");
-
-function generateContainerBoxes(n) {
-  for (let box = 0; box < n * n; box++) {
-    let containerBox = document.createElement("div");
-    containerBox.id = 'containerBox';
-    presentsContainer.append(containerBox);
-    for (let i=0; i<box.length; i++) {
-      let present = document.createElement("div");
-      present.className = 'containerBox';
-      containerBox.append(present);
-    }
-    for (let i=0; i<box.length; i++) {
-      let noPresent = document.createElement("div");
-      noPresent.className = 'containerBox';
-      containerBox.append(noPresent);
-    }
-  }
-  return containerBox;
-  }
-
-presentsContainer = generateContainerBoxes(3);
-presentsContainer.addEventListener("click", showResults);
+guessYourPrize(4);
